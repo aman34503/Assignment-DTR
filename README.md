@@ -109,11 +109,109 @@ Base URL: http://nudgecreationpageapi.com
 
 - To create a new nudge, send a POST request to the /nudges endpoint with the payload containing the details of the nudge.
 
+#### POST : http://nudgecreationpageapi.com/nudges
+
+#### Request
+
+```
+
+{
+  "event": "Birthday Party",
+  "title": "Reminder: John's Birthday Party",
+  "coverImage": "https://example.com/images/birthday.jpg",
+  "sendTime": "2023-05-15 14:00:00",
+  "description": "Don't forget to bring a gift for John's birthday!",
+  "icon": "https://example.com/images/birthday-icon.jpg",
+  "invitation": "Join us in celebrating John's special day!"
+}
+
+
+```
+#### Response
+
+```
+HTTP/1.1 201 Created
+
+{
+  "id": "123",
+  "event": "Birthday Party",
+  "title": "Reminder: John's Birthday Party",
+  "coverImage": "https://example.com/images/birthday.jpg",
+  "sendTime": "2023-05-15 14:00:00",
+  "description": "Don't forget to bring a gift for John's birthday!",
+  "icon": "https://example.com/images/birthday-icon.jpg",
+  "invitation": "Join us in celebrating John's special day!"
+}
+```
+
 2. Get Nudge:
 
 - To retrieve the details of a nudge, send a GET request to the /nudges/{id} endpoint with the id of the nudge.
 
+#### Request : 
+
+```
+GET http://nudgecreationpageapi.com/nudges/123
+
+```
+
+#### Response :
+
+```
+HTTP/1.1 200 OK
+
+{
+  "id": "123",
+  "event": "Birthday Party",
+  "title": "Reminder: John's Birthday Party",
+  "coverImage": "https://example.com/images/birthday.jpg",
+  "sendTime": "2023-05-15 14:00:00",
+  "description": "Don't forget to bring a gift for John's birthday!",
+  "icon": "https://example.com/images/birthday-icon.jpg",
+  "invitation": "Join us in celebrating John's special day!"
+}
+
+```
+
 3. Update Nudge:
 
 - To update the details of a nudge, send a PUT request to the /nudges/{id} endpoint with the id of the nudge.
+
+#### Request : 
+
+#### PUT http://nudgecreationpageapi.com/nudges/123
+
+```
+{
+  "event": "Birthday Party",
+  "title": "Reminder: John's Birthday Party",
+  "coverImage": "https://example.com/images/birthday.jpg",
+  "sendTime": "2023-05-15 15:00:00",
+  "description": "Don't forget to bring a gift for John's birthday! We'll be playing games and having cake.",
+  "icon": "https://example.com/images/birthday-icon.jpg",
+  "invitation": "Join us in celebrating John's special day!"
+}
+
+```
+#### Response : 
+
+```
+HTTP/1.1 200 OK
+
+{
+  "id": "123",
+  "event": "Birthday Party",
+  "title": "Reminder: John's Birthday Party",
+  "coverImage": "https://example.com/images/birthday.jpg",
+  "sendTime": "2023-05-15 15:00:00",
+  "description": "Don't forget to bring a gift for John's birthday! We'll be playing games and having cake.",
+  "icon": "https://example.com
+
+```
+
+
+
+
+
+
 

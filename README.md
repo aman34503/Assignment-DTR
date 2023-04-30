@@ -2,6 +2,46 @@
 
 Nudge Creation Page API Documentation
 
+# TASK - 1
+
+#### We can test the API using Postman. Here are some sample requests:
+
+###### Get an event by id:
+
+- URL: http://localhost:3000/api/v3/app/events?id=18
+- Method: GET
+
+###### Get latest events:
+
+- URL: http://localhost:3000/api/v3/app/events?type=latest&limit=5&page=1
+- Method: GET
+
+###### Create an event:
+
+- URL: http://localhost:3000/api/v3/app/events
+- Method: POST
+- Payload:
+
+```
+{
+  "name": "Test Event",
+  "files": {
+    "image": "base64-encoded-image-data"
+  },
+  "tagline": "Test Tagline",
+  "schedule": "2023-05-01T09:00:00.000Z",
+  "description": "Test Description",
+  "moderator": "John Doe",
+  "category": "Test Category",
+  "sub_category": "Test Subcategory",
+  "rigor_rank": 3
+}
+```
+###### Update an event:
+
+- URL: http://localhost:3000/api/v3/app/events/18
+- Method: PUT
+
 # TASK - 2
 
 ## Description
